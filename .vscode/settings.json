@@ -1,19 +1,22 @@
 {
-    // Environment variables settings
+    // Platform selection
     "DEVICE": "stm32f429i",
     "BOARD": "stm32f429i_disc1",
-    "APP_DIR": "../zephyrproject/zephyr/samples/basic/blinky",
-    "TOOLCHAINS_DIR": "../zephyr-sdk-0.15.2",
-    "ZEPHYR_SRC_DIR": "../zephyrproject/zephyr",
-    "ZEPHYR_HOST_TOOL_DIR":"../zephyr-sdk-0.15.2/sysroots/x86_64-pokysdk-linux/usr/bin",
     "SVD_FILE": "svd/STM32F40x.svd",
+    // Application
+    "APP_DIR": "apps/threads",
+    // Zephyr source
+    "ZEPHYR_SRC_DIR": "../zephyrproject/zephyr",
+    "TOOLCHAINS_DIR": "../zephyr-sdk-0.15.2",
+    // Zephyr toolchains
+    "ZEPHYR_HOST_TOOL_DIR":"../zephyr-sdk-0.15.2/sysroots/x86_64-pokysdk-linux/usr/bin",
+    // Debug settings
     "OPENOCD_CONFIG_FILE": "../zephyrproject/zephyr/boards/arm/stm32f429i_disc1/support/openocd.cfg",
 
     "editor.fontVariations": false,
     "files.exclude": {
         "": true
     },
-
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,

@@ -4,9 +4,18 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "config",
+            "type": "shell",
+            "command": "source ${config:ZEPHYR_SRC_DIR}/zephyr-env.sh; west build -t guiconfig -b ${config:BOARD} -s ${config:APP_DIR}",
+            "args": [ ],
+            "group": "build",
+			"dependsOn": [],
+            "problemMatcher": ["$gcc"]
+        },
+        {
             "label": "build",
             "type": "shell",
-            "command": "source ${config:ZEPHYR_SRC_DIR}/zephyr-env.sh; west build -p always -b ${config:BOARD} ${config:APP_DIR}",
+            "command": "source ${config:ZEPHYR_SRC_DIR}/zephyr-env.sh; west build -p always -b ${config:BOARD} -s ${config:APP_DIR}",
             "args": [ ],
             "group": "build",
 			"dependsOn": [],

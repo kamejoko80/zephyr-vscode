@@ -17,10 +17,7 @@
             //"runToEntryPoint": "__start",
             "runToEntryPoint": "main",
             "runToMain": true,
-            "servertype": "openocd",
-            "serverpath": "${config:ZEPHYR_HOST_TOOL_DIR}/openocd",
             "device": "${config:DEVICE}",
-            "interface": "swd",
             "svdFile": "${config:SVD_FILE}",
             "configFiles": [
 				"${config:OPENOCD_CONFIG_FILE}"
@@ -32,7 +29,10 @@
                 "monitor reset init",
                 "monitor sleep 200"
             ],
-            "showDevDebugOutput": "raw"
+            "showDevDebugOutput": "raw",
+            "serverpath": "${config:ZEPHYR_HOST_TOOL_DIR}/openocd",
+            "servertype": "openocd",
+            "interface": "swd",
         }
     ]
 }
